@@ -29,6 +29,8 @@ My Status line Configuration using [i3pystatus](https://github.com/enkore/i3pyst
   + Open [`rofi`](https://davedavenport.github.io/rofi/) to select an MPD server
 
 + [PulseAudio Volume](https://i3pystatus.readthedocs.io/en/latest/i3pystatus.html#module-i3pystatus.pulseaudio)
+	+ Open `pavucontrol` on left click
+	+ Toggle Mute on right click
 
 
 ## Configuring MPD Server List
