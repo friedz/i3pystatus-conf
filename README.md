@@ -1,5 +1,5 @@
 
-# friedɀ i3pystatus
+# friedɀ i3pystatus Config
 
 My Status line Configuration using [i3pystatus](https://github.com/enkore/i3pystatus) syntax is
 
