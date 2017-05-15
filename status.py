@@ -14,11 +14,11 @@ status = Status()
 status.register("clock")
 
 status.register("battery",
-    format="{bar} {percentage_design:.2f}%{remaining:%E %hh:%Mm}",
-    not_present_text="--",
-    alert=True,
-    alert_percentage=5,
-    status={
+    format = "{bar} {percentage_design:.2f}%{remaining:%E %hh:%Mm}",
+    not_present_text = "--",
+    alert = True,
+    alert_percentage = 5,
+    status = {
         "DIS": "▼",
         "CHR": "▲",
         "FULL": "",
@@ -27,18 +27,18 @@ status.register("battery",
 )
 
 status.register("temp",
-    format="{temp:.0f}°C",
+    format = "{temp:.0f}°C",
     on_leftclick = "urxvt -e htop",
 )
 
 status.register("cpu_usage_bar",
-    bar_type="vertical",
-    format="{usage_bar_cpu0}{usage_bar_cpu1}{usage_bar_cpu2}{usage_bar_cpu3} {usage_bar}",
+    bar_type = "vertical",
+    format =" {usage_bar_cpu0}{usage_bar_cpu1}{usage_bar_cpu2}{usage_bar_cpu3} {usage_bar}",
     on_leftclick = "urxvt -e htop",
 )
 
 status.register("mem_bar",
-    format="{used_mem_bar}",
+    format = "{used_mem_bar}",
     on_leftclick = "urxvt -e htop",
 )
 
@@ -52,9 +52,9 @@ def toggle_eth_show(self):
         self.format_up = short
 
 status.register("network",
-    interface="eth0",
-    format_up="E",
-    format_down="E",
+    interface = "eth0",
+    format_up = "E",
+    format_down = "E",
     on_leftclick = toggle_eth_show,
     on_rightclick = [],
     on_upscroll = [],
@@ -116,20 +116,20 @@ def change_server(self):
             self.s = None
 
 status.register("mpd",
-    format="{artist} {status} {title}",
-    status={
+    format = "{artist} {status} {title}",
+    status = {
         "pause": "▷",
         "play": "▶",
         "stop": "◾",
     },
-    on_rightclick=open_ncmpc,
-    on_middleclick=change_server,
+    on_rightclick = open_ncmpc,
+    on_middleclick = change_server,
 )
 
 status.register("pulseaudio",
-    format="♪{volume}",
-    bar_type="vertical",
-    vertical_bar_width=1,
+    format = "♪{volume}",
+    bar_type = "vertical",
+    vertical_bar_width = 1,
 )
 
 status.run()
