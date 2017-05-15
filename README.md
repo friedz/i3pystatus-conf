@@ -39,12 +39,13 @@ The configuration file is
 ~/.config/i3pystatus/mpd.toml
 ```
 
-and the config file format is
+and the config file format is [toml](https://github.com/toml-lang/toml)
 
 ```toml
 [<Name to show in rofi>]
-host = "<url/IP for the Server>"
-port = <Port of the MPD (can be left empty for 6600)>
+host = "<URL or IP>"
+port = <Port>
 ```
+port can be left out for the standart port (`6600`)
 
 it's really nothing special
