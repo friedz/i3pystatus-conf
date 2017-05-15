@@ -97,7 +97,7 @@ def change_server(self):
     for st in list(m.keys()):
         s += st + "\n"
 
-    cmd = ["rofi", "-dmenu"]
+    cmd = ["rofi", "-dmenu", "-p", "Select MPD > ", "-l", "{}".format(len(m))]
     p = subprocess.Popen(cmd,
         stdin=subprocess.PIPE,
         stdout=subprocess.PIPE,
